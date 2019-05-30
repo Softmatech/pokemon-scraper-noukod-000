@@ -12,7 +12,7 @@ class Pokemon
   def self.find(id,database_connection)
     database_connection.execute("SELECT name,type FROM pokemon WHERE ID = ?",id)[0]
     id_, name, type, hp = answer
-    
+
     new(id: id_, name: name, type: type,db: db, hp: hp)
   end
 end
