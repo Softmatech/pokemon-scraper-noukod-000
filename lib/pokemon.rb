@@ -13,7 +13,7 @@ class Pokemon
     response = database_connection.execute("SELECT * FROM pokemon WHERE ID = ?",id)[0]
     id, name, type, hp = response
 
-    new(id: id, name: name, type: type,db: db, hp: hp)
+    new(id: id, name: name, type: type,db: database_connection, hp: hp)
   end
 
   def alter_hp(num, db)
