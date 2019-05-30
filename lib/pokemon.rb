@@ -14,15 +14,15 @@ class Pokemon
   end
 
   def self.find(id,database_connection)
-    response = database_connection.execute("SELECT * FROM pokemon WHERE ID = ?",id)[0]
-    id, name, type, hp = response
+    answer = db.execute("SELECT * FROM pokemon WHERE id = ?",id)[0]
+    id_, name, type, hp = answer
 
-    new(id: id, name: name, type: type,db: database_connection, hp: hp)
+    new(id: id_, name: name, type: type,db: db, hp: hp)
   end
 
-  def alter_hp(num, db)
-        db.execute("UPDATE pokemon SET hp = #{num}
-                WHERE id = #{self.id}")
-    end
+  # def alter_hp(num, db)
+  #       db.execute("UPDATE pokemon SET hp = #{num}
+  #               WHERE id = #{self.id}")
+  #   end
 
 end
