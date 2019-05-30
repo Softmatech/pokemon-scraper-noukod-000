@@ -15,4 +15,7 @@ class Pokemon
 
     new(id: id_, name: name, type: type,db: db, hp: hp)
   end
+
+
+  
 end
