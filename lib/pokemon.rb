@@ -17,5 +17,5 @@ class Pokemon
   end
 
 
-  
+
 end
